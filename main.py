@@ -1,22 +1,28 @@
+import os
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 def display_menu():
+    clear_screen()
     print("""
-    ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄     ▄▄▄▄     
-    ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌  ▄█░░░░▌    
-     ▀▀▀▀▀▀▀▀▀█░▌ ▀▀▀▀▀▀▀▀▀█░▌ ▐░░▌▐░░▌    
-              ▐░▌          ▐░▌  ▀▀ ▐░░▌    
-     ▄▄▄▄▄▄▄▄▄█░▌          ▐░▌     ▐░░▌    
-    ▐░░░░░░░░░░░▌ ▄▄▄▄▄▄▄▄▄█░▌     ▐░░▌    
-     ▀▀▀▀▀▀▀▀▀█░▌▐░░░░░░░░░░░▌     ▐░░▌    
-              ▐░▌▐░█▀▀▀▀▀▀▀▀▀      ▐░░▌    
-     ▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄  ▄▄▄▄█░░█▄▄▄ 
-    ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
-     ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀ 
+    \033[1;37;40m▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄     ▄▄▄▄     
+    \033[1;37;40m▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌  ▄█░░░░▌    
+     \033[1;37;40m▀▀▀▀▀▀▀▀▀█░▌ ▀▀▀▀▀▀▀▀▀█░▌ ▐░░▌▐░░▌    
+              \033[1;37;40m▐░▌          ▐░▌  ▀▀ ▐░░▌    
+     \033[1;37;40m▄▄▄▄▄▄▄▄▄█░▌          ▐░▌     ▐░░▌    
+    \033[1;37;40m▐░░░░░░░░░░░▌ ▄▄▄▄▄▄▄▄▄█░▌     ▐░░▌    
+     \033[1;37;40m▀▀▀▀▀▀▀▀▀█░▌▐░░░░░░░░░░░▌     ▐░░▌    
+              \033[1;37;40m▐░▌▐░█▀▀▀▀▀▀▀▀▀      ▐░░▌    
+     \033[1;37;40m▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄  ▄▄▄▄█░░█▄▄▄ 
+    \033[1;37;40m▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+     \033[1;37;40m▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀ 
                                           
     Options:
-    1. Your Option 1
+    \033[1;31;40m1. Your Option 1
     2. Your Option 2
-    3. Your Option 3
-    00. Exit
+    \033[1;31;40m3. Your Option 3
+    \033[1;31;40m00. Exit
     """)
 
 def main():
@@ -25,13 +31,13 @@ def main():
         user_choice = input("Enter your choice: ")
         
         if user_choice == '1':
-            print("You selected Option 1.")
+            print("\033[1;37;40mYou selected Option 1.")
             # Add your logic for Option 1 here
         elif user_choice == '2':
-            print("You selected Option 2.")
+            print("\033[1;37;40mYou selected Option 2.")
             # Add your logic for Option 2 here
         elif user_choice == '3':
-            print("You selected Option 3.")
+            print("\033[1;37;40mYou selected \033[1;31;40mOption 3.")
             # Add your logic for Option 3 here
         elif user_choice == '00':
             print("Exiting the program. Goodbye!")
