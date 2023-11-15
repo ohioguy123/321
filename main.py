@@ -25,12 +25,14 @@ def display_menu():
 
 def install_busware():
     os.system("git clone https://github.com/ohioguy123/BusWare.git")
+    os.system("cd BusWare && pip3 install -r requirements.txt && python3 BusWare.py")
     clear_screen()
     print("""
-    BusWare successfully installed!
+    BusWare successfully installed and executed!
 
     321
     """)
+    exit()
 
 def main():
     while True:
