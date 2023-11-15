@@ -20,6 +20,7 @@ def display_menu():
                                           
     Options:
     1. Install BusWare
+    2. Install Mars Multi Tool
     00. Exit
     """)
 
@@ -31,6 +32,14 @@ def install_busware():
     """)
     exit()
 
+def install_mars_multi_tool():
+    os.system("cd && git clone https://github.com/ohioguy123/Mars-Multi-Tool.git")
+    clear_screen()
+    print("""
+    Mars Multi Tool successfully installed!
+    """)
+    exit()
+
 def main():
     while True:
         display_menu()
@@ -38,6 +47,8 @@ def main():
         
         if user_choice == '1':
             install_busware()
+        elif user_choice == '2':
+            install_mars_multi_tool()
         elif user_choice == '00':
             print("Exiting the program. Goodbye!")
             break
